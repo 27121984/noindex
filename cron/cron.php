@@ -256,6 +256,7 @@ WHERE  ( `e`.`entity_type_id` = '1' )
 
 private function openFtpConnection($file,$mode){ 
 		$defStoreId = Mage::app()->getDefaultStoreView()->getStoreId();
+
 		$host = Mage::getStoreConfig('eshopexperian_options/eshopexperian_general/experian_host', $defStoreId);
 		$user = Mage::getStoreConfig('eshopexperian_options/eshopexperian_general/experian_user', $defStoreId);
 		$pass = Mage::getStoreConfig('eshopexperian_options/eshopexperian_general/experian_pass', $defStoreId);
