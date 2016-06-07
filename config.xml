@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Eshop_PromoNoIndex>
+            <version>1.0</version>
+        </Eshop_PromoNoIndex>
+    </modules>
+    <global>
+        <models>
+            <Eshop_PromoNoIndex>
+                <class>Eshop_PromoNoIndex_Model</class>
+            </Eshop_PromoNoIndex>
+        </models>
+    </global>
+     <adminhtml>
+        <events>
+            <catalog_category_prepare_save>
+                <observers>
+                    <Eshop_PromoNoIndex>
+                        <class>Eshop_PromoNoIndex/Observer</class>
+                        <method>CategoryNoIndex</method>
+                    </Eshop_PromoNoIndex>
+                </observers>
+            </catalog_category_prepare_save>
+        </events>
+    </adminhtml>
+    
+</config>
